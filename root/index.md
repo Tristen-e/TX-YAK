@@ -12,7 +12,7 @@
     />
     <!-- link to external css -->
     <!--<link rel="stylesheet" type="text/css" href="CSS/styles.css" />-->
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/main.css">
 
     <!-- ***link to external javascript files***-->
     <script src="scripts/script.js" defer></script>
