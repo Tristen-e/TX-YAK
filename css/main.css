@@ -1,0 +1,287 @@
+
+/*  Tristen Ellis
+    ITSE - 2302
+    Unit 7 Final Project
+    DESC:   Fishing shirt/Merch site (css portion) for Final project
+    Filename/location:   /TellisFinalProject/CSS/styles.css
+*/
+/* FONTS
+===================
+!! ---changed all font to raleway as i liked the look of it more
+      any other text---
+  headings
+!font-family: 'Noto Sans JP', sans-serif;
+  other
+font-family: 'Raleway', sans-serif;
+*/
+
+/* Basic Formatting
+=======================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+html {
+  min-width: 256px;
+  max-width: 1920px;
+  height: 100%;
+  background-color: rgb(29, 29, 29);
+  text-align: center;
+  background-image: url(https://cdn.shopify.com/s/files/1/0027/0617/8111/t/1/assets/BLACK-CRUMPLED-BACKGROUND-REPEATABLE-TILE-1800-PIXELS-WIDE.jpg?v=2616518454011028772);
+}
+
+/*header design*/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)),
+    url("/TEllisFinalProject/images/originals/foggy.jpg");
+  height: 50%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.headerTitle {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 0, 0);
+  padding: 0px 15px;
+  outline: 5px solid black;
+}
+h1 {
+  text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 rgb(255, 255, 255);
+}
+footer {
+  display: block;
+  background-color: rgba(107, 107, 107, 0.397);
+}
+.wLine {
+  border: 1px solid whitesmoke;
+  margin-bottom: 15px;
+}
+
+/* Text
+ ==========================*/
+html {
+  font-size: 1 rem;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+.headerTitle h1 {
+  font-size: 8rem;
+  letter-spacing: 2rem;
+}
+h2,
+h3 {
+  letter-spacing: 2px;
+}
+.text {
+  margin: auto;
+  max-width: 60%;
+  margin-bottom: 15px;
+}
+
+/* Links
+====================*/
+a:link {
+  color: rgb(231, 0, 0);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(31, 103, 211);
+}
+a:hover {
+  background-color: rgba(57, 60, 255, 0.637);
+  color: rgb(255, 255, 255);
+}
+a:active {
+  color: rgb(0, 255, 98);
+  background-color: rgb(163, 163, 163);
+}
+
+/* Nav
+======================*/
+.btnNav {
+  background-color: rgb(0, 0, 0);
+  outline: none;
+  color: white;
+  float: left;
+  border: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 22px;
+  width: 25%;
+}
+.btnNav a:link {
+  color: #fff;
+}
+.btnNav:hover,
+.btnNav a:hover,
+.btnfrm:hover,
+.btnfrm a:hover {
+  background-color: rgb(255, 0, 0);
+}
+/* Add to cart btns
+======================= */
+#sidebar {
+  display: block;
+  z-index: 9;
+  cursor: move;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #000000;
+  color: whitesmoke;
+  position: fixed;
+  /* bottom: 0%; */
+  top: 0%;
+  height: 50%;
+  overflow: hidden;
+  visibility: hidden;
+  resize: both;
+}
+
+#items,
+#items li {
+  list-style: none;
+  width: 100%;
+  margin: 0 0 4px;
+  padding: 0;
+  overflow: visible;
+}
+.btnfrm {
+  padding: 14px 16px;
+  font-size: 22px;
+  width: 25%;
+}
+
+.btnCart {
+  bottom: 0;
+  width: 100%;
+  display: block;
+  padding: 14px 16px;
+  font-size: 22px;
+  /* visibility: hidden; */
+}
+/* Article(Merch sections)
+ =======================*/
+
+.wrap {
+  clear: both;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+/* form overlay
+=====================*/
+.overlay-form {
+  position: absolute;
+  top: 50vh;
+  left: 0px;
+  width: 100vw;
+  height: 0vh;
+  background: rgba(0, 0, 0, 0.945);
+  color: whitesmoke;
+  z-index: -1;
+  opacity: 0;
+  padding: 80px 100px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+#details {
+  margin: 2px 0 2px 0;
+  padding: 0;
+  list-style: none;
+}
+.overlay-form .close-btn {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: whitesmoke;
+}
+/* hidden btns that are displayed after 
+  "Place order" button is cliked
+===============*/
+#btnPrint {
+  visibility: hidden;
+  display: block;
+}
+#btnClose {
+  visibility: hidden;
+  display: block;
+}
+
+.overlay-form p {
+  color: whitesmoke;
+  margin: -15px 0px 30px;
+}
+.overlay-form .form-element {
+  margin: 20px 0px;
+}
+.overlay-form label {
+  display: block;
+  color: whitesmoke;
+  margin-bottom: 5px;
+}
+.overlay-form input {
+  width: 100%;
+  padding: 6px;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  background: transparent;
+  outline: none;
+  border-radius: 10px;
+}
+.overlay-form button,
+.center button {
+  margin-top: 10px;
+  width: 100px;
+  height: 35px;
+  background: whitesmoke;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+body.activeForm .overlay-form {
+  z-index: 2;
+  opacity: 1;
+  top: 0px;
+  height: 100%;
+}
+
+/*===============desktop=========================*/
+/* 
+@media only screen and (max-width: 799px) {
+
+} */
+@media only print {
+  .wrap,
+  header,
+  footer,
+  #btnPrint,
+  #btnClose,
+  #sidebar {
+    background-image: none;
+    display: none;
+  }
+  .overlay-form,
+  body {
+    background-color: #fff;
+    color: black;
+    background-image: none;
+  }
+}
